@@ -21,4 +21,10 @@ public class HelloRestApi {
         return "Hello "+u.getFirstName()+" "+u.getLastName()+ " from BridgeLabs.";
     }
 
+    @PutMapping("/put/{firstName}")
+    public String displayMsg (@PathVariable String firstName, @RequestParam (value= "lastName") String lastName)
+    {
+        return "Hello "+firstName+" "+lastName+" !";
+    }
+
 }
